@@ -1,2 +1,6 @@
 [phppack]
 version = "8.2"
+
+[build]
+install = ["composer install --no-dev --optimize-autoloader"]
+start = "php artisan serve --host 0.0.0.0 --port $PORT"
