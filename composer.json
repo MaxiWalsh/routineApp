@@ -1,7 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "laravel/routine-app",
+    "version": "1.0.0",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "App para mostrar rutina de gimnasio",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {

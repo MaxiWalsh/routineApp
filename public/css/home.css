@@ -1,0 +1,398 @@
+/* Importa una fuente de Google Fonts si quieres algo similar a la imagen */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --primary-bg-color: rgb(19,23,31); /* Fondo general más claro para simular papel */
+    --card-bg-color: #ffffff; /* Fondo de las secciones de día/tabla */
+    --header-color: #333333; /* Color de texto para títulos principales */
+    --subheader-color: #444444; /* Color de texto para subtítulos de bloques */
+    --text-color: #555555; /* Color general del texto */
+    --muted-color: #777777; /* Texto gris más claro para repeticiones */
+    --border-color: #cccccc; /* Color de borde para las celdas de la tabla */
+    --accent-color: #ff0000; /* Color de acento para resaltar, como un azul */
+    --block-header-bg: #e9ecef; /* Fondo para los encabezados de bloque */
+    --main-title-bg: #d0d2d5; /* Fondo para el título principal */
+    --day-header-bg: #dde2e7; /* Fondo para el encabezado de cada día */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Fuente más legible para el cuerpo */
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--primary-bg-color);
+    margin: 0;
+    padding: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: auto; /* Permite el scroll horizontal si la tabla es muy ancha */
+}
+
+.container {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 20px auto;
+    background-color: var(--card-bg-color);
+    padding: 0; /* Eliminamos el padding del container para que la tabla llegue a los bordes */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: var(--header-color);
+    text-align: center;
+    margin: 0;
+    padding: 20px 30px;
+    font-size: 2.2em;
+    background-color: var(--main-title-bg);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 2px solid var(--border-color);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Contenedor general para la tabla de rutinas, ahora agrupamos los días */
+.routine-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: auto; /* Asegura que si la tabla es muy ancha, se pueda desplazar */
+}
+
+/* Modificamos la clase 'day' para que contenga su propio encabezado y bloques */
+.day {
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    display: flex; /* Flex para organizar el encabezado del día y los bloques */
+    flex-direction: column; /* El encabezado arriba, los bloques abajo */
+    border-bottom: 2px solid var(--border-color); /* Separador grueso entre días */
+}
+
+.day:last-child {
+    border-bottom: none; /* No hay borde inferior en el último día */
+}
+
+/* Nuevo estilo para el encabezado del día que abarca todo */
+.day-header { /* Usamos esta clase si puedes agregarla al h2 */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: var(--subheader-color);
+    font-size: 1.3em;
+    margin: 0;
+    padding: 15px 10px;
+    background-color: var(--day-header-bg); /* Fondo para el encabezado del día */
+    text-align: center;
+    border-bottom: 1px solid var(--border-color); /* Borde sutil debajo del encabezado del día */
+    flex-shrink: 0;
+}
+
+/* Contenedor para los bloques de ejercicios de un día */
+.day-blocks {
+    display: flex;
+    flex-direction: row; /* Coloca los bloques horizontalmente */
+    flex-wrap: nowrap; /* Evita que los bloques salten de línea */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-top: 1px solid var(--border-color); /* Borde superior para la fila de bloques */
+}
+
+/* Modificamos la clase 'block' para que actúe como una celda/columna */
+.block {
+    margin-bottom: 0;
+    padding: 0;
+    background-color: transparent;
+    border-left: none;
+    border-radius: 0;
+    box-shadow: none;
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 200px; /* Ancho mínimo para cada columna de bloque */
+    border-right: 1px solid var(--border-color); /* Borde para separar las columnas */
+    display: flex;
+    flex-direction: column;
+}
+
+.block:last-child {
+    border-right: none; /* No hay borde derecho en el último bloque de cada día */
+}
+
+.block h3.muted {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: var(--subheader-color);
+    font-size: 1em;
+    margin: 0;
+    text-transform: uppercase;
+    background-color: var(--block-header-bg);
+    padding: 10px 10px;
+    border-radius: 0;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    flex-shrink: 0;
+    white-space: nowrap; /* Evita que el título del bloque se rompa */
+    overflow: hidden; /* Oculta el texto que se desborda si es muy largo */
+    text-overflow: ellipsis; /* Añade puntos suspensivos si se desborda */
+}
+
+ul.exercises {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+ul.exercises li {
+    padding: 8px 10px;
+    border-bottom: 1px dashed var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea al inicio si el texto es largo */
+    font-size: 0.9em;
+    flex-shrink: 0;
+}
+
+ul.exercises li:last-child {
+    border-bottom: none;
+}
+
+ul.exercises li strong {
+    color: var(--text-color);
+    font-weight: 600;
+    flex-grow: 1;
+    margin-right: 10px;
+    word-break: break-word; /* Permite que las palabras largas se rompan */
+    min-width: 0; /* Necesario para que word-break funcione en flex items */
+}
+
+ul.exercises li .muted {
+    color: var(--muted-color);
+    font-size: 0.85em;
+    font-weight: 400;
+    white-space: nowrap; /* Evita que las repeticiones se rompan */
+    text-align: right;
+    flex-shrink: 0; /* Evita que las repeticiones se encojan */
+    margin-left: 5px; /* Pequeño espacio para separar de strong */
+}
+
+p {
+    text-align: center;
+    color: var(--muted-color);
+    font-size: 1.1em;
+    padding: 20px;
+    border: 1px dashed var(--border-color);
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .routine-table-wrapper {
+        overflow-x: visible; /* En pantallas pequeñas, no forzar scroll horizontal */
+    }
+
+    .day {
+        flex-direction: column; /* Apila el encabezado del día y los bloques */
+        border-bottom: 2px solid var(--border-color);
+    }
+
+    .day-header {
+        border-bottom: 1px solid var(--border-color);
+        font-size: 1.2em;
+    }
+
+    .day-blocks {
+        flex-direction: column; /* Apila los bloques verticalmente */
+        border-top: none; /* No necesitamos este borde superior aquí */
+    }
+
+    .block {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color); /* Borde entre bloques apilados */
+        min-width: unset;
+        width: 100%;
+    }
+    .block:last-child {
+        border-bottom: none; /* No hay borde en el último bloque del día */
+    }
+
+    .block h3.muted {
+        border-bottom: 1px solid var(--border-color);
+        white-space: normal; /* Permite que el título del bloque se rompa en varias líneas */
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    ul.exercises li {
+        flex-direction: row; /* Vuelve a poner el nombre y repeticiones en línea */
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10px;
+    }
+
+    ul.exercises li strong {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        padding: 15px;
+    }
+
+    .day-header {
+        font-size: 1.1em;
+        padding: 10px;
+    }
+
+    .block h3.muted {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    ul.exercises li {
+        font-size: 0.85em;
+        padding: 6px 8px;
+    }
+
+    ul.exercises li .muted {
+        font-size: 0.8em;
+    }
+}
+
+/* Navegación de días */
+.day-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--card-bg-color);
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+}
+
+.day-button {
+    background-color: var(--block-header-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.day-button:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.day-button.active {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+/* Contenido de días */
+.day-content {
+    padding: 20px;
+}
+
+/* Responsive para botones */
+@media (max-width: 768px) {
+    .day-navigation {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .day-button {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+/* Navegación de rutinas */
+.routine-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--card-bg-color);
+    border-bottom: 2px solid var(--border-color);
+    flex-wrap: wrap;
+}
+
+.routine-button {
+    background-color: var(--main-title-bg);
+    border: 2px solid var(--border-color);
+    color: var(--header-color);
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.routine-button:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.routine-button.active {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive para botones de rutina */
+@media (max-width: 768px) {
+    .routine-navigation {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .routine-button {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+}
+.logo-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+.logo {
+    max-width: 25%;
+    object-fit: cover;
+}

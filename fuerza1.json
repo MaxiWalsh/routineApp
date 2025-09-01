@@ -1,0 +1,310 @@
+{
+    "fuerza_1": {
+        "día_1": {
+            "nombre": "Posterior y pecho",
+            "bloques": [
+                {
+                    "nombre": "Movilidad",
+                    "ejercicios": [
+                        {
+                            "nombre": "Psoas + isquios",
+                            "repeticiones": "x12"
+                        },
+                        {
+                            "nombre": "Aductor",
+                            "repeticiones": "x12"
+                        },
+                        {
+                            "nombre": "Parabrisas",
+                            "repeticiones": "x12"
+                        },
+                        {
+                            "nombre": "Desperezamiento",
+                            "repeticiones": "x12"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Zona media",
+                    "ejercicios": [
+                        {
+                            "nombre": "Plancha glúteos",
+                            "repeticiones": "2x12"
+                        },
+                        {
+                            "nombre": "Plancha lateral",
+                            "repeticiones": "2x8xlado"
+                        },
+                        {
+                            "nombre": "Ruedita/plan retracción",
+                            "repeticiones": "2x15"
+                        },
+                        {
+                            "nombre": "Plancha lateral",
+                            "repeticiones": "2x8xlado"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Activación",
+                    "ejercicios": [
+                        {
+                            "nombre": "Bisagra de cadera",
+                            "repeticiones": "x12"
+                        },
+                        {
+                            "nombre": "Abducción banda",
+                            "repeticiones": "x12xlado"
+                        },
+                        {
+                            "nombre": "Manguito rotador",
+                            "repeticiones": "x12xlado"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Fuerza",
+                    "ejercicios": [
+                        {
+                            "nombre": "Búlgaras",
+                            "repeticiones": "4x8/12"
+                        },
+                        {
+                            "nombre": "Pre plano/aperturas",
+                            "repeticiones": "4x6/12"
+                        },
+                        {
+                            "nombre": "Flexiones/fondos",
+                            "repeticiones": "3x4/12"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Fuerza",
+                    "ejercicios": [
+                        {
+                            "nombre": "Peso muerto/sumo",
+                            "repeticiones": "4x6/12"
+                        },
+                        {
+                            "nombre": "Tríceps uni/bilateral",
+                            "repeticiones": "3x8/15"
+                        },
+                        {
+                            "nombre": "Gemelos",
+                            "repeticiones": "3x20/40"
+                        },
+                        {
+                            "nombre": "Patada glúteos",
+                            "repeticiones": "3x20"
+                        }
+                    ]
+                }
+            ]
+        },
+        "día_2": {
+            "nombre": "Cuádriceps y espalda",
+            "bloques": [
+                {
+                    "nombre": "Movilidad",
+                    "ejercicios": [
+                        {
+                            "nombre": "Mov tobillo",
+                            "repeticiones": "x12"
+                        },
+                        {
+                            "nombre": "Apertura",
+                            "repeticiones": "x12"
+                        },
+                        {
+                            "nombre": "Parabrisas",
+                            "repeticiones": "x12"
+                        },
+                        {
+                            "nombre": "Extensión rodilla",
+                            "repeticiones": "x12"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Zona media",
+                    "ejercicios": [
+                        {
+                            "nombre": "Plancha escalador",
+                            "repeticiones": "2x20"
+                        },
+                        {
+                            "nombre": "Pall off",
+                            "repeticiones": "2x8xlado"
+                        },
+                        {
+                            "nombre": "Plancha pelota",
+                            "repeticiones": "2x20"
+                        },
+                        {
+                            "nombre": "Bicho muerto",
+                            "repeticiones": "2x12"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Activación",
+                    "ejercicios": [
+                        {
+                            "nombre": "Activación psoas",
+                            "repeticiones": "x12xlado"
+                        },
+                        {
+                            "nombre": "Activación escapular",
+                            "repeticiones": "x12"
+                        },
+                        {
+                            "nombre": "Sentadilla movilidad",
+                            "repeticiones": "x12"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Fuerza",
+                    "ejercicios": [
+                        {
+                            "nombre": "Sentadilla",
+                            "repeticiones": "4x6/12"
+                        },
+                        {
+                            "nombre": "Remo unilateral",
+                            "repeticiones": "3x8/12"
+                        },
+                        {
+                            "nombre": "Prensa/cuadricera",
+                            "repeticiones": "3x12/20"
+                        },
+                        {
+                            "nombre": "Trx/dorsalera",
+                            "repeticiones": "4x8/12"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Fuerza",
+                    "ejercicios": [
+                        {
+                            "nombre": "Curl bíceps",
+                            "repeticiones": "3x8/12"
+                        },
+                        {
+                            "nombre": "Sentadilla unilateral",
+                            "repeticiones": "4x8/12"
+                        },
+                        {
+                            "nombre": "Cinturón ruso",
+                            "repeticiones": "3x20 a 60``"
+                        }
+                    ]
+                }
+            ]
+        },
+        "día_3": {
+            "nombre": "Mixto",
+            "bloques": [
+                {
+                    "nombre": "Movilidad",
+                    "ejercicios": [
+                        {
+                            "nombre": "Psoas + isquios",
+                            "repeticiones": "x12"
+                        },
+                        {
+                            "nombre": "Ranita",
+                            "repeticiones": "x12"
+                        },
+                        {
+                            "nombre": "Parabrisas",
+                            "repeticiones": "x12"
+                        },
+                        {
+                            "nombre": "Circunducción",
+                            "repeticiones": "x12"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Zona media",
+                    "ejercicios": [
+                        {
+                            "nombre": "Plancha Superman",
+                            "repeticiones": "2x12"
+                        },
+                        {
+                            "nombre": "Crunch/barquito",
+                            "repeticiones": "2x20"
+                        },
+                        {
+                            "nombre": "Plancha estrella",
+                            "repeticiones": "2x30``xlado"
+                        },
+                        {
+                            "nombre": "Elevaciones de pierna",
+                            "repeticiones": "2x20"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Activación",
+                    "ejercicios": [
+                        {
+                            "nombre": "Abducción cuadrupedia",
+                            "repeticiones": "x15"
+                        },
+                        {
+                            "nombre": "Puente unilateral",
+                            "repeticiones": "x15xlado"
+                        },
+                        {
+                            "nombre": "Press con banda",
+                            "repeticiones": "x15"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Fuerza",
+                    "ejercicios": [
+                        {
+                            "nombre": "Hip thrust",
+                            "repeticiones": "4x6/15"
+                        },
+                        {
+                            "nombre": "Press militar",
+                            "repeticiones": "4x8/12"
+                        },
+                        {
+                            "nombre": "Estocadas/avanzadas",
+                            "repeticiones": "4x8/12"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Fuerza",
+                    "ejercicios": [
+                        {
+                            "nombre": "Vuelo lateral",
+                            "repeticiones": "3x8/12"
+                        },
+                        {
+                            "nombre": "Vuelo frontal",
+                            "repeticiones": "3x8/12"
+                        },
+                        {
+                            "nombre": "Gemelos unilateral",
+                            "repeticiones": "3x8/15"
+                        },
+                        {
+                            "nombre": "Abducción polea",
+                            "repeticiones": "3x8/15"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
