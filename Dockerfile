@@ -2,7 +2,7 @@
 FROM composer:2 AS vendor
 WORKDIR /app
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress
+RUN composer install --no-dev --optimize-autoloader
 
 # Etapa 2: Imagen de PHP
 FROM php:8.2-cli
